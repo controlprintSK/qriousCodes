@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <title>QriousCodes | Login</title>
+    <!-- cdn Stylesheet-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/global/form-style.css" type="text/css" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="./css/login/login.css" type="text/css" />
+  </head>
+  <body>
+    <main class="loginWrapper">
+      <div class="loginInfoGrid">
+        <div>
+          <div class="brandLogo">
+            <img src="./images/qriouscodes-logo.png" alt="qriouscodes-logo" />
+          </div>
+          <h1>Welcome, We are glad to see you again!</h1>
+          <div class="brandQr">
+            <img src="./images/qrcode-qriouscodes.png" alt="QriousCodes QR" />
+          </div>
+        </div>
+      </div>
+      <div class="midGridImg">
+        <img src="./images/login/tracking.png" alt="tracking" />
+      </div>
+      <div class="loginFormCol">
+        <div class="loginFormGrid">
+          <!-- <div class="logoIcon">
+            <img src="./images/qriouscodes-lcon.png" alt="QriousCodes lcon" />
+          </div> -->
+          <!-- ---------login grid--------- -->
+          <div id="loginGridID">
+            <h2>
+              <strong>Sign In to</strong><br />
+              QriousCodes
+            </h2>
+            <form class="form needs-validation" novalidate id="loginForm">
+              <div class="input-group has-validation">
+                <input
+                  type="text"
+                  placeholder="Company Code"
+                  class="inputStyle inputSmall"
+                  id="validationTooltipCompanyCode"
+                  required />
+                <div class="invalid-tooltip">
+                  Please enter a unique company code.
+                </div>
+              </div>
+              <div class="input-group has-validation">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="inputStyle"
+                  id="validationTooltipEmail"
+                  required />
+                <div class="invalid-tooltip">Please enter your email.</div>
+              </div>
+              <div class="input-group has-validation">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  class="inputStyle"
+                  maxlength="16"
+                  autocomplete="new-password"
+                  id="validationTooltipPassword"
+                  required />
+                <div class="invalid-tooltip">Please enter password.</div>
+              </div>
+              <!-- <div>Remember me</div> -->
+              <div>
+                <span
+                  class="cursorPointer link"
+                  onclick="onclickForgotPassword()">
+                  Forgot Password ?
+                </span>
+              </div>
+              <div class="d-grid">
+                <input
+                  type="submit"
+                  class="btnStyle btnPrimary"
+                  value="Login" />
+              </div>
+            </form>
+          </div>
+          <!-- ---------forgot password grid--------- -->
+          <div id="forgotPasswordGridID" style="display: none">
+            <h2 class="pb-1">
+              <strong>Forgot Password</strong>
+            </h2>
+            <p>
+              To reset your password, enter the email address you use to sign in
+              to QRIOUSCODES
+            </p>
+            <form
+              class="form needs-validation"
+              novalidate
+              id="forgotPasswordForm">
+              <div class="input-group has-validation">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="inputStyle"
+                  id="validationTooltipEmail"
+                  required />
+                <div class="invalid-tooltip">Please enter your email.</div>
+              </div>
+              <div class="d-grid">
+                <input
+                  type="submit"
+                  value="Submit"
+                  class="btnStyle btnPrimary" />
+              </div>
+              <div>
+                <span
+                  class="cursorPointer linkPrimary"
+                  onclick="funBackToLogin()">
+                  <i class="fa-solid fa-arrow-left"></i> back to login
+                </span>
+              </div>
+            </form>
+          </div>
+          <!-- ---------otp verify grid--------- -->
+          <div id="otpVerifyGridID" style="display: none">
+            <h2 class="pb-1">
+              <strong>Enter OTP</strong>
+            </h2>
+            <p>We have sent you OTP to your email address for verification</p>
+            <form class="form needs-validation" novalidate id="otpVerifyForm">
+              <div class="input-group has-validation otp-container mt-2">
+                <input
+                  type="text"
+                  class="otp-input"
+                  pattern="\d"
+                  maxlength="1"
+                  required />
+                <input
+                  type="text"
+                  class="otp-input"
+                  pattern="\d"
+                  maxlength="1"
+                  disabled />
+                <input
+                  type="text"
+                  class="otp-input"
+                  pattern="\d"
+                  maxlength="1"
+                  disabled />
+                <input
+                  type="text"
+                  class="otp-input"
+                  pattern="\d"
+                  maxlength="1"
+                  disabled />
+                <input
+                  type="text"
+                  class="otp-input"
+                  pattern="\d"
+                  maxlength="1"
+                  disabled />
+                <input
+                  type="text"
+                  class="otp-input"
+                  pattern="\d"
+                  maxlength="1"
+                  disabled />
+                <div class="invalid-tooltip">Please enter OTP.</div>
+              </div>
+              <div class="d-grid">
+                <input
+                  type="submit"
+                  class="btnStyle btnPrimary"
+                  value="Submit" />
+              </div>
+              <div>
+                <span
+                  class="cursorPointer linkPrimary"
+                  onclick="funBackToLogin()">
+                  <i class="fa-solid fa-arrow-left"></i> back to login
+                </span>
+              </div>
+            </form>
+          </div>
+          <!-- ---------change password grid--------- -->
+          <div id="changePasswordGridID" style="display: none">
+            <h2 class="pb-1">
+              <strong>Change Password</strong>
+            </h2>
+            <form
+              class="form needs-validation"
+              novalidate
+              id="changePasswordForm">
+              <div class="input-group has-validation">
+                <input
+                  type="password"
+                  placeholder="New Password"
+                  class="inputStyle"
+                  id="validationTooltipPassword"
+                  required />
+                <div class="invalid-tooltip">Please enter password.</div>
+              </div>
+              <div class="input-group has-validation">
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  class="inputStyle"
+                  id="validationTooltipConfirmPassword"
+                  required />
+                <div class="invalid-tooltip">
+                  Confirm password doesn't match
+                </div>
+              </div>
+              <div>
+                <input
+                  type="submit"
+                  class="btnStyle btnPrimary"
+                  value="Change Password" />
+              </div>
+              <div>
+                <span
+                  class="cursorPointer linkPrimary"
+                  onclick="funBackToLogin()">
+                  <i class="fa-solid fa-arrow-left"></i> back to login
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- ===========js function=========== -->
+    <!-- ===========js function=========== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <!-- ======OTP JS start====== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var otpInputs = document.querySelectorAll(".otp-input");
+        function setupOtpInputListeners(inputs) {
+          inputs.forEach(function (input, index) {
+            input.addEventListener("paste", function (ev) {
+              var clip = ev.clipboardData.getData("text").trim();
+              if (!/^\d{6}$/.test(clip)) {
+                ev.preventDefault();
+                return;
+              }
+
+              var characters = clip.split("");
+              inputs.forEach(function (otpInput, i) {
+                otpInput.value = characters[i] || "";
+              });
+
+              enableNextBox(inputs[0], 0);
+              inputs[5].removeAttribute("disabled");
+              inputs[5].focus();
+              updateOTPValue(inputs);
+            });
+
+            input.addEventListener("input", function () {
+              var currentIndex = Array.from(inputs).indexOf(this);
+              var inputValue = this.value.trim();
+
+              if (!/^\d$/.test(inputValue)) {
+                this.value = "";
+                return;
+              }
+
+              if (inputValue && currentIndex < 5) {
+                inputs[currentIndex + 1].removeAttribute("disabled");
+                inputs[currentIndex + 1].focus();
+              }
+
+              if (currentIndex === 4 && inputValue) {
+                inputs[5].removeAttribute("disabled");
+                inputs[5].focus();
+              }
+
+              updateOTPValue(inputs);
+            });
+
+            input.addEventListener("keydown", function (ev) {
+              var currentIndex = Array.from(inputs).indexOf(this);
+
+              if (!this.value && ev.key === "Backspace" && currentIndex > 0) {
+                inputs[currentIndex - 1].focus();
+              }
+            });
+          });
+        }
+
+        function enableNextBox(input, currentIndex) {
+          var inputValue = input.value;
+
+          if (inputValue === "") {
+            return;
+          }
+
+          var nextIndex = currentIndex + 1;
+          var nextBox = otpInputs[nextIndex];
+
+          if (nextBox) {
+            nextBox.removeAttribute("disabled");
+          }
+        }
+
+        function updateOTPValue(inputs) {
+          var otpValue = "";
+
+          inputs.forEach(function (input) {
+            otpValue += input.value;
+          });
+
+          if (inputs === otpInputs) {
+            document.getElementById("verificationCode").value = otpValue;
+          }
+        }
+
+        setupOtpInputListeners(otpInputs);
+        otpInputs[0].focus(); // Set focus on the first OTP input field
+        otpInputs[5].addEventListener("input", function () {
+          updateOTPValue(otpInputs);
+        });
+      });
+    </script>
+    <!-- ======OTP JS end====== -->
+    <!-- ======form validation start=========== -->
+    <script>
+      (function () {
+        "use strict";
+        var forms = document.querySelectorAll(".needs-validation");
+        console.log(forms, "forms--->>--");
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (e) {
+              let status = form.checkValidity();
+              if (status == false) {
+                e.preventDefault();
+                e.stopPropagation();
+              }
+              if (status == true) {
+                e.preventDefault();
+                onSubmitLogin();
+              }
+              // if (status == true) {
+              //   e.preventDefault();
+              //   onSubmitForgotPassword();
+              // }
+              // if (status == true) {
+              //   e.preventDefault();
+              //   onSubmitOTPVerify();
+              // }
+              // if (status == true) {
+              //   e.preventDefault();
+              //   onSubmitChangePassword();
+              // }
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+    <!-- ======form validation end=========== -->
+    <!-- ================= -->
+    <script>
+      let getIdLoginGrid = document.getElementById("loginGridID");
+      let getIdForgotPassword = document.getElementById("forgotPasswordGridID");
+      let getIdOTPVerify = document.getElementById("otpVerifyGridID");
+      let getIdChangePassword = document.getElementById("changePasswordGridID");
+
+      function onclickForgotPassword() {
+        getIdForgotPassword.style.display = "block";
+        getIdLoginGrid.style.display = "none";
+      }
+      function onSubmitLogin() {
+        location.replace("./username/layout.html");
+      }
+      function onSubmitForgotPassword() {
+        // ---------------
+        getIdOTPVerify.style.display = "block";
+        getIdForgotPassword.style.display = "none";
+        // ---------------
+      }
+      function onSubmitOTPVerify() {
+        getIdOTPVerify.style.display = "none";
+        getIdChangePassword.style.display = "block";
+      }
+      function onSubmitChangePassword() {
+        getIdChangePassword.style.display = "none";
+        getIdLoginGrid.style.display = "block";
+      }
+      function funBackToLogin() {
+        getIdLoginGrid.style.display = "block";
+        getIdForgotPassword.style.display = "none";
+        getIdOTPVerify.style.display = "none";
+        getIdChangePassword.style.display = "none";
+      }
+    </script>
+    <!-- ================ -->
+  </body>
+</html>
