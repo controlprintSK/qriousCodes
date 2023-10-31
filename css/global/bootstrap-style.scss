@@ -1,0 +1,26 @@
+ol,
+ul {
+  padding: 0 0 0 0;
+}
+.dropdown-menu {
+  font-size: var(--font-size) !important;
+}
+.dropdown-item {
+  font-size: var(--font-size) !important;
+}
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  border-color: var(--bs-btn-active-border-color);
+}
+.table > thead th {
+  background-color: #f3f6f9;
+}
+.form-control {
+  color: var(--color-text-rgb);
+}
+.form-select {
+  color: var(--color-text-rgb);
+}

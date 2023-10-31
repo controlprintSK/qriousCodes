@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+    <title>QriousCodes | Company</title>
+    <!-- cdn Stylesheet-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="../css/layout/layout-style.css"
+      type="text/css" />
+    <link rel="stylesheet" href="../css/layout/sidebar.css" type="text/css" />
+    <link href="../css/bstreeview.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ************sec*************** -->
+    <main class="min-h-100vh layout">
+      <!-- side menubar start-->
+      <aside class="sidebar h-100vh">
+        <div class="mainSidebar h-100">
+          <div class="logo">
+            <img src="../images/qriouscodes-icon-light.png" alt="" />
+          </div>
+          <div class="mainNav">
+            <ul class="navList">
+              <li>
+                <button
+                  type="button"
+                  class="btn avtarItem avtarItemLight"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  data-bs-title="Tooltip on right">
+                  <i class="fa-solid fa-gauge"></i>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="btn avtarItem avtarItemLight"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  data-bs-title="Tooltip on right">
+                  <i class="bi bi-person-fill-add"></i>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="btn avtarItem avtarItemLight"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  data-bs-title="Tooltip on right">
+                  <i class="bi bi-gear"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- ----------- -->
+        <div class="sidebarPanel">
+          <div class="brandInfo">
+            <div class="brandLogo">
+              <!-- <img src="/images/logoIcon.png" alt="logoIcon" />
+              <span>QriousCodes</span> -->
+              <img src="../images/qriouscodes-logo.png" alt="logoIcon" />
+            </div>
+          </div>
+          <div class="navList mt-3">
+            <div class="border-bottom pb-1 mb-2">--Menu--------</div>
+            <div>
+              <div id="tree"></div>
+            </div>
+          </div>
+        </div>
+        <!-- ----------- -->
+      </aside>
+      <!-- side menubar end-->
+      <!-- right panel start-->
+      <section class="right-panel">
+        <header class="header border-bottom">
+          <div class="row g-3 justify-content-between align-items-center">
+            <div class="col">
+              <input
+                placeholder="Search here..."
+                class="form-control form-control-sm"
+                style="max-width: 200px" />
+            </div>
+            <div class="col col-auto">
+              <div class="row g-3 justify-content-between align-items-center">
+                <div class="col">
+                  <button
+                    class="btn btn-sm avtarItem position-relative"
+                    type="button">
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      9+
+                    </span>
+                    <i class="bi bi-bell"></i>
+                  </button>
+                </div>
+                <div class="col">
+                  <div>
+                    <button
+                      class="btn btn-sm header-profile-user"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <span class="d-flex align-items-center">
+                        <img
+                          class="-circle header-profile-user-img"
+                          src="../images/user-img.jpg" />
+                        <span class="ms-xl-2 text-start">
+                          <div class="header-user-name">
+                            Prem Deopa<small>Admin</small>
+                          </div>
+                        </span>
+                      </span>
+                    </button>
+                    <ul class="boxShadow dropdown-menu">
+                      <li class="dropdown-title">Welcome Prem!</li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-person"></i> Profile</a
+                        >
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-gear"></i> Setting</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-box-arrow-right"></i> Logout</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="main-wrapper main-wrapper-full-height">
+          <section class="page-title">
+            <div class="row g-3 align-items-center">
+              <div class="col">
+                <div class="page-title-text">
+                  <span>Company</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="table-responsive">
+            <table class="table table-bordered caption-top table-sm">
+              <caption>
+                <div class="row align-items-center">
+                  <div class="col">List of Company</div>
+                  <div class="col col-auto">
+                    <div class="row row-cols-auto g-3 align-items-center">
+                      <div>
+                        <button
+                          class="btn btn-sm dropdown-toggle"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          <i class="bi bi-building"></i> Company
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="#">Company 1</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Company 2</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Company 3</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <input
+                          placeholder="Search here..."
+                          class="form-control form-control-sm"
+                          id="myInput" />
+                      </div>
+                      <div>
+                        <a
+                          href="./company-add.html"
+                          class="btn btn-primary btn-sm">
+                          <i class="bi bi-plus-circle"></i> Company
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col" width="40">SN</th>
+                  <th scope="col" width="190">Company Code</th>
+                  <th scope="col">Company Name</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">City</th>
+                  <th scope="col" width="120" class="text-center">Status</th>
+                  <th scope="col" width="120" class="text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody id="myTable">
+                <tr>
+                  <th scope="row">1</th>
+                  <td>QCC0001</td>
+                  <td>
+                    <div class="company-avtar-grid">
+                      <div class="d-flex align-items-center">
+                        <div class="company-logo">
+                          <img
+                            class="company-logo-img"
+                            src="../images/company/logo-mankind.png" />
+                        </div>
+                        <div class="ms-xl-2 text-start">
+                          <div class="company-name">
+                            Mankind Pharma<small>Pharma</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>208, Okhla Industrial Estate, Phase-III,</div>
+                    <div>New Delhi-110020</div>
+                  </td>
+                  <td>Noida</td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      <span class="badge text-bg-success">Active</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      <div class="col">
+                        <a href="#"><i class="bi bi-eye"></i></a>
+                      </div>
+                      <div class="col">
+                        <a href="./company-add.html"
+                          ><i class="bi bi-pencil-square"></i
+                        ></a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="text-danger"
+                          ><i class="bi bi-trash3"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table-danger">
+                  <th scope="row">2</th>
+                  <td>QCC0002</td>
+                  <td>
+                    <div class="company-avtar-grid">
+                      <div class="d-flex align-items-center">
+                        <div class="company-logo">
+                          <img
+                            class="company-logo-img"
+                            src="../images/company/logo-jkcement.png" />
+                        </div>
+                        <div class="ms-xl-2 text-start">
+                          <div class="company-name">
+                            JK Cement<small>Cement</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>208, Okhla Industrial Estate, Phase-III,</div>
+                    <div>New Delhi-110020</div>
+                  </td>
+                  <td>Noida</td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      <span class="badge text-bg-danger">Deactivated</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      <div class="col">
+                        <a href="#"><i class="bi bi-eye"></i></a>
+                      </div>
+                      <div class="col">
+                        <a href="./company-add.html"
+                          ><i class="bi bi-pencil-square"></i
+                        ></a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="text-danger"
+                          ><i class="bi bi-trash3"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>QCC0003</td>
+                  <td>
+                    <div class="company-avtar-grid">
+                      <div class="d-flex align-items-center">
+                        <div class="company-logo">
+                          <img
+                            class="company-logo-img"
+                            src="../images/qc-watermark.png" />
+                        </div>
+                        <div class="ms-xl-2 text-start">
+                          <div class="company-name">
+                            Company Name<small>Business Category</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>Addres Line 1</div>
+                    <div>Addres Line 2</div>
+                  </td>
+                  <td>City</td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      --
+                    </div>
+                  </td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      <div class="col">
+                        <a href="#"><i class="bi bi-eye"></i></a>
+                      </div>
+                      <div class="col">
+                        <a href="./company-add.html"
+                          ><i class="bi bi-pencil-square"></i
+                        ></a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="text-danger"
+                          ><i class="bi bi-trash3"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>QCC0004</td>
+                  <td>
+                    <div class="company-avtar-grid">
+                      <div class="d-flex align-items-center">
+                        <div class="company-logo">
+                          <img
+                            class="company-logo-img"
+                            src="../images/qc-watermark.png" />
+                        </div>
+                        <div class="ms-xl-2 text-start">
+                          <div class="company-name">
+                            Company Name<small>Business Category</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>Addres Line 1</div>
+                    <div>Addres Line 2</div>
+                  </td>
+                  <td>City</td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      --
+                    </div>
+                  </td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      <div class="col">
+                        <a href="#"><i class="bi bi-eye"></i></a>
+                      </div>
+                      <div class="col">
+                        <a href="./company-add.html"
+                          ><i class="bi bi-pencil-square"></i
+                        ></a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="text-danger"
+                          ><i class="bi bi-trash3"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>QCC0005</td>
+                  <td>
+                    <div class="company-avtar-grid">
+                      <div class="d-flex align-items-center">
+                        <div class="company-logo">
+                          <img
+                            class="company-logo-img"
+                            src="../images/qc-watermark.png" />
+                        </div>
+                        <div class="ms-xl-2 text-start">
+                          <div class="company-name">
+                            Company Name<small>Business Category</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>Addres Line 1</div>
+                    <div>Addres Line 2</div>
+                  </td>
+                  <td>City</td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      --
+                    </div>
+                  </td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      <div class="col">
+                        <a href="#"><i class="bi bi-eye"></i></a>
+                      </div>
+                      <div class="col">
+                        <a href="./company-add.html"
+                          ><i class="bi bi-pencil-square"></i
+                        ></a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="text-danger"
+                          ><i class="bi bi-trash3"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </main>
+      </section>
+      <!-- right panel end-->
+    </main>
+    <!-- ===========js function=========== -->
+    <!-- ===========js function=========== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <!-- --------Treeview Initialization--------- -->
+    <script src="../js/bstreeview.js"></script>
+    <script>
+      $(function () {
+        var json = [
+          {
+            icon: "bi bi-speedometer2",
+            text: "Dashboard",
+            href: "./dashboard.html",
+          },
+          {
+            text: "Master",
+            nodes: [
+              {
+                icon: "bi bi-buildings",
+                text: "Company Group",
+                href: "./company-group.html",
+              },
+              {
+                icon: "bi bi-building",
+                text: "Company",
+                href: "./company.html",
+              },
+            ],
+          },
+          {
+            icon: "bi bi-dot",
+            text: "Menu Item 1",
+            href: "#",
+          },
+          {
+            icon: "bi bi-dot",
+            text: "Menu Item 2",
+            href: "#",
+          },
+        ];
+
+        $("#tree").bstreeview({
+          data: json,
+          expandIcon: "fa fa-angle-down fa-fw",
+          collapseIcon: "fa fa-angle-right fa-fw",
+          indent: 0.4,
+          parentsMarginLeft: "0rem",
+          openNodeLinkOnNewTab: false,
+        });
+      });
+    </script>
+  </body>
+</html>

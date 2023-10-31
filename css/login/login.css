@@ -26,7 +26,7 @@
   color: rgb(var(--color-black-rgb));
 }
 .loginWrapper h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
   color: rgb(var(--color-black-rgb));
 }
@@ -111,6 +111,8 @@
 }
 .loginWrapper .loginFormCol .loginFormGrid .form {
   margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
 }
 .loginWrapper .loginFormCol .loginFormGrid .form a {
   color: rgb(var(--color-primary-rgb));

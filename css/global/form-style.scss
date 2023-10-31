@@ -1,17 +1,19 @@
 @mixin inputStyle {
-  font-size: 14px;
-  padding: 0px 15px;
-  height: 42px;
-  border-radius: 6px;
-  border: 1px solid rgb(var(--border-color-rgb));
+  // font-size: 14px;
+  // padding: 0px 15px;
+  // height: 42px;
+  // border-radius: 6px;
+  // border: 1px solid rgb(var(--border-color-rgb));
 }
 @mixin btnStyle {
-  font-size: 14px;
-  padding: 0px 15px;
-  height: 42px;
-  border-radius: 6px;
-  border: 1px solid rgb(var(--border-color-rgb));
+  // font-size: 14px;
+  // padding: 0px 15px;
+  // height: 42px;
+  // border-radius: 6px;
+  // border: 1px solid rgb(var(--border-color-rgb));
 }
+// ---------------
+// ==========bootstrap classes start==========
 // ==========bootstrap classes start==========
 .invalid-tooltip {
   position: absolute;
@@ -21,37 +23,18 @@
   color: var(--bs-danger);
   background-color: transparent;
 }
+.statusBadge {
+  border-radius: 0px;
+  display: block;
+  padding: 0.6rem 0.5rem;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(var(--color-white-rgb));
+}
+// ==========bootstrap classes end==========
 // ==========bootstrap classes end==========
 // =======================
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  @include inputStyle;
-  width: 100%;
-  &:focus,
-  &:focus-visible {
-    outline: 1px solid rgba(var(--color-primary-rgb), 0.2);
-    box-shadow: 0 0 5px 2px rgba(var(--color-primary-rgb), 0.2);
-  }
-}
-select {
-  @include inputStyle;
-  padding: 0px 10px 0px 5px;
-}
-input[type="submit"] {
-  @include inputStyle;
-}
-.btnStyle {
-  @include btnStyle;
-  cursor: pointer;
-}
-.linkBtnStyle {
-  @include btnStyle;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.btnPrimary {
+.btn-primary {
   background-image: -webkit-linear-gradient(
     -40deg,
     rgb(var(--color-primary-rgb)) 60%,
@@ -63,9 +46,11 @@ input[type="submit"] {
   }
   border-color: transparent !important;
 }
-// =======================
-.form {
-  display: grid;
-  gap: 1.25rem;
+.border-left {
+  border-left: var(--bs-border-width) var(--bs-border-style)
+    var(--bs-border-color) !important;
 }
-// =======================
+.border-right {
+  border-right: var(--bs-border-width) var(--bs-border-style)
+    var(--bs-border-color) !important;
+}

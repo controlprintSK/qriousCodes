@@ -37,64 +37,54 @@
       </div>
       <div class="loginFormCol">
         <div class="loginFormGrid">
-          <!-- <div class="logoIcon">
+          <!-- -------------------  -->
+          <div class="logoIcon">
             <img src="./images/qriouscodes-lcon.png" alt="QriousCodes lcon" />
-          </div> -->
-          <!-- ---------login grid--------- -->
+          </div>
+          <!-- -----login form----- -->
           <div id="loginGridID">
             <h2>
-              <strong>Sign In to</strong><br />
+              <strong>Sign In</strong><br />
               QriousCodes
             </h2>
-            <form class="form needs-validation" novalidate id="loginForm">
-              <div class="input-group has-validation">
+            <form class="form" onsubmit="onSubmitLogin();return false">
+              <!-- <div>
                 <input
                   type="text"
-                  placeholder="Company Code"
-                  class="inputStyle inputSmall"
-                  id="validationTooltipCompanyCode"
+                  placeholder="User ID"
+                  class="form-control  inputSmall"
                   required />
-                <div class="invalid-tooltip">
-                  Please enter a unique company code.
-                </div>
-              </div>
-              <div class="input-group has-validation">
+              </div> -->
+              <div>
                 <input
-                  type="email"
-                  placeholder="Email"
-                  class="inputStyle"
-                  id="validationTooltipEmail"
+                  type="text"
+                  placeholder="User ID"
+                  class="form-control"
                   required />
-                <div class="invalid-tooltip">Please enter your email.</div>
               </div>
-              <div class="input-group has-validation">
+              <div>
                 <input
                   type="password"
                   placeholder="Password"
-                  class="inputStyle"
+                  class="form-control"
                   maxlength="16"
                   autocomplete="new-password"
-                  id="validationTooltipPassword"
                   required />
-                <div class="invalid-tooltip">Please enter password.</div>
               </div>
               <!-- <div>Remember me</div> -->
               <div>
                 <span
-                  class="cursorPointer link"
+                  class="cursorPointer linkPrimary"
                   onclick="onclickForgotPassword()">
                   Forgot Password ?
                 </span>
               </div>
               <div class="d-grid">
-                <input
-                  type="submit"
-                  class="btnStyle btnPrimary"
-                  value="Login" />
+                <input type="submit" class="btn btn-primary" value="Login" />
               </div>
             </form>
           </div>
-          <!-- ---------forgot password grid--------- -->
+          <!-- -----forgot password form----- -->
           <div id="forgotPasswordGridID" style="display: none">
             <h2 class="pb-1">
               <strong>Forgot Password</strong>
@@ -103,24 +93,16 @@
               To reset your password, enter the email address you use to sign in
               to QRIOUSCODES
             </p>
-            <form
-              class="form needs-validation"
-              novalidate
-              id="forgotPasswordForm">
-              <div class="input-group has-validation">
+            <form class="form" onsubmit="onSubmitForgotPassword();return false">
+              <div>
                 <input
                   type="email"
                   placeholder="Email"
-                  class="inputStyle"
-                  id="validationTooltipEmail"
+                  class="form-control"
                   required />
-                <div class="invalid-tooltip">Please enter your email.</div>
               </div>
               <div class="d-grid">
-                <input
-                  type="submit"
-                  value="Submit"
-                  class="btnStyle btnPrimary" />
+                <input type="submit" value="Submit" class="btn btn-primary" />
               </div>
               <div>
                 <span
@@ -131,14 +113,14 @@
               </div>
             </form>
           </div>
-          <!-- ---------otp verify grid--------- -->
+          <!-- -----otp verify form----- -->
           <div id="otpVerifyGridID" style="display: none">
             <h2 class="pb-1">
               <strong>Enter OTP</strong>
             </h2>
             <p>We have sent you OTP to your email address for verification</p>
-            <form class="form needs-validation" novalidate id="otpVerifyForm">
-              <div class="input-group has-validation otp-container mt-2">
+            <form class="form" onsubmit="onSubmitOTPVerify();return false">
+              <div class="otp-container mt-2">
                 <input
                   type="text"
                   class="otp-input"
@@ -150,38 +132,38 @@
                   class="otp-input"
                   pattern="\d"
                   maxlength="1"
-                  disabled />
+                  disabled
+                  required />
+                <input
+                  type="text"
+                  class="otp-input"
+                  pattern="\d"
+                  maxlength="1"
+                  disabled
+                  required />
+                <input
+                  type="text"
+                  class="otp-input"
+                  pattern="\d"
+                  maxlength="1"
+                  disabled
+                  required />
+                <input
+                  type="text"
+                  class="otp-input"
+                  pattern="\d"
+                  maxlength="1"
+                  disabled
+                  required />
                 <input
                   type="text"
                   class="otp-input"
                   pattern="\d"
                   maxlength="1"
                   disabled />
-                <input
-                  type="text"
-                  class="otp-input"
-                  pattern="\d"
-                  maxlength="1"
-                  disabled />
-                <input
-                  type="text"
-                  class="otp-input"
-                  pattern="\d"
-                  maxlength="1"
-                  disabled />
-                <input
-                  type="text"
-                  class="otp-input"
-                  pattern="\d"
-                  maxlength="1"
-                  disabled />
-                <div class="invalid-tooltip">Please enter OTP.</div>
               </div>
               <div class="d-grid">
-                <input
-                  type="submit"
-                  class="btnStyle btnPrimary"
-                  value="Submit" />
+                <input type="submit" class="btn btn-primary" value="Submit" />
               </div>
               <div>
                 <span
@@ -192,39 +174,30 @@
               </div>
             </form>
           </div>
-          <!-- ---------change password grid--------- -->
+          <!-- -----change password form----- -->
           <div id="changePasswordGridID" style="display: none">
             <h2 class="pb-1">
               <strong>Change Password</strong>
             </h2>
-            <form
-              class="form needs-validation"
-              novalidate
-              id="changePasswordForm">
-              <div class="input-group has-validation">
+            <form class="form" onsubmit="onSubmitChangePassword();return false">
+              <div>
                 <input
                   type="password"
                   placeholder="New Password"
-                  class="inputStyle"
-                  id="validationTooltipPassword"
+                  class="form-control"
                   required />
-                <div class="invalid-tooltip">Please enter password.</div>
-              </div>
-              <div class="input-group has-validation">
-                <input
-                  type="password"
-                  placeholder="Confirm Password"
-                  class="inputStyle"
-                  id="validationTooltipConfirmPassword"
-                  required />
-                <div class="invalid-tooltip">
-                  Confirm password doesn't match
-                </div>
               </div>
               <div>
                 <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  class="form-control"
+                  required />
+              </div>
+              <div class="d-grid">
+                <input
                   type="submit"
-                  class="btnStyle btnPrimary"
+                  class="btn btn-primary"
                   value="Change Password" />
               </div>
               <div>
@@ -240,12 +213,37 @@
       </div>
     </main>
     <!-- ===========js function=========== -->
-    <!-- ===========js function=========== -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
-    <!-- ======OTP JS start====== -->
+    <script>
+      let getIdLoginGrid = document.getElementById("loginGridID");
+      let getIdForgotPassword = document.getElementById("forgotPasswordGridID");
+      let getIdOTPVerify = document.getElementById("otpVerifyGridID");
+      let getIdChangePassword = document.getElementById("changePasswordGridID");
+      function onSubmitLogin() {
+        location.replace("./username/layout.html");
+      }
+      function onclickForgotPassword() {
+        getIdForgotPassword.style.display = "block";
+        getIdLoginGrid.style.display = "none";
+      }
+      function onSubmitForgotPassword() {
+        getIdOTPVerify.style.display = "block";
+        getIdForgotPassword.style.display = "none";
+      }
+      function onSubmitOTPVerify() {
+        getIdOTPVerify.style.display = "none";
+        getIdChangePassword.style.display = "block";
+      }
+      function onSubmitChangePassword() {
+        getIdChangePassword.style.display = "none";
+        getIdLoginGrid.style.display = "block";
+      }
+      function funBackToLogin() {
+        getIdLoginGrid.style.display = "block";
+        getIdForgotPassword.style.display = "none";
+        getIdOTPVerify.style.display = "none";
+        getIdChangePassword.style.display = "none";
+      }
+    </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         var otpInputs = document.querySelectorAll(".otp-input");
@@ -335,81 +333,5 @@
         });
       });
     </script>
-    <!-- ======OTP JS end====== -->
-    <!-- ======form validation start=========== -->
-    <script>
-      (function () {
-        "use strict";
-        var forms = document.querySelectorAll(".needs-validation");
-        console.log(forms, "forms--->>--");
-        Array.prototype.slice.call(forms).forEach(function (form) {
-          form.addEventListener(
-            "submit",
-            function (e) {
-              let status = form.checkValidity();
-              if (status == false) {
-                e.preventDefault();
-                e.stopPropagation();
-              }
-              if (status == true) {
-                e.preventDefault();
-                onSubmitLogin();
-              }
-              // if (status == true) {
-              //   e.preventDefault();
-              //   onSubmitForgotPassword();
-              // }
-              // if (status == true) {
-              //   e.preventDefault();
-              //   onSubmitOTPVerify();
-              // }
-              // if (status == true) {
-              //   e.preventDefault();
-              //   onSubmitChangePassword();
-              // }
-              form.classList.add("was-validated");
-            },
-            false
-          );
-        });
-      })();
-    </script>
-    <!-- ======form validation end=========== -->
-    <!-- ================= -->
-    <script>
-      let getIdLoginGrid = document.getElementById("loginGridID");
-      let getIdForgotPassword = document.getElementById("forgotPasswordGridID");
-      let getIdOTPVerify = document.getElementById("otpVerifyGridID");
-      let getIdChangePassword = document.getElementById("changePasswordGridID");
-
-      function onclickForgotPassword() {
-        getIdForgotPassword.style.display = "block";
-        getIdLoginGrid.style.display = "none";
-      }
-      function onSubmitLogin() {
-        location.replace("./username/layout.html");
-      }
-      function onSubmitForgotPassword() {
-        // ---------------
-        getIdOTPVerify.style.display = "block";
-        getIdForgotPassword.style.display = "none";
-        // ---------------
-      }
-      function onSubmitOTPVerify() {
-        getIdOTPVerify.style.display = "none";
-        getIdChangePassword.style.display = "block";
-      }
-      function onSubmitChangePassword() {
-        getIdChangePassword.style.display = "none";
-        getIdLoginGrid.style.display = "block";
-      }
-      function funBackToLogin() {
-        getIdLoginGrid.style.display = "block";
-        getIdForgotPassword.style.display = "none";
-        getIdOTPVerify.style.display = "none";
-        getIdChangePassword.style.display = "none";
-      }
-    </script>
-    <!-- ================ -->
   </body>
 </html>

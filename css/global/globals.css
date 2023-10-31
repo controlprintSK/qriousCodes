@@ -22,8 +22,20 @@
   --border-radius: 0.85rem;
   --border-radius-grid: 1rem;
   --border-radius-control: 0.4rem;
-  --font-size: 0.88rem;
+  --box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+  --padding: 1.5rem;
+  --padding-small: 1rem;
+  --margin: 1.5rem;
+  --margin-small: 1rem;
+  --font-size: 0.85rem;
   --font-size-small: 0.75rem;
+  --bs-body-font-size: 0.85rem;
+  --bs-dropdown-font-size: 0.85rem;
+  --bs-table-color: rgb(var(--color-text-rgb));
+  --bs-emphasis-color: rgb(var(--color-text-rgb));
+  --bs-dropdown-item-padding-x: 0.25rem;
+  --bs-dropdown-item-padding-y: 0.25rem;
+  --bs-btn-active-border-color: rgb(222, 226, 230);
 }
 
 * {
@@ -39,7 +51,7 @@ body {
 
 body {
   font-family: var(--font-robo);
-  font-size: var(--font-size);
+  font-size: var(--bs-body-font-size);
   color: rgb(var(--color-text-rgb));
 }
 
@@ -72,6 +84,15 @@ h3 {
 
 h4 {
   font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.9rem !important;
+  color: rgb(var(--color-text-dark-rgb));
+}
+
+h6 {
+  font-size: 0.8rem;
 }
 
 ul,

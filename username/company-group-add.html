@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
-    <title>QriousCodes | Layout</title>
+    <title>QriousCodes | Add Company Group</title>
     <!-- cdn Stylesheet-->
     <link
       rel="stylesheet"
@@ -75,7 +75,7 @@
           <div class="brandInfo">
             <div class="brandLogo">
               <!-- <img src="/images/logoIcon.png" alt="logoIcon" />
-            <span>QriousCodes</span> -->
+              <span>QriousCodes</span> -->
               <img src="../images/qriouscodes-logo.png" alt="logoIcon" />
             </div>
           </div>
@@ -155,28 +155,103 @@
             </div>
           </div>
         </header>
-        <main class="main-wrapper">
+        <main class="main-wrapper main-wrapper-full-height">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="./company-group.html" class="backBtn"
+                  ><i class="bi bi-arrow-left"></i> Back</a
+                >
+              </li>
+              <li class="breadcrumb-item">
+                <a href="./company-group.html">Company Group</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Add Company Group
+              </li>
+            </ol>
+          </nav>
           <section class="page-title">
             <div class="row g-3 align-items-center">
               <div class="col">
                 <div class="page-title-text">
-                  <span>Page Title</span>
-                  <small>List of page items</small>
+                  <span>Company Group</span>
                 </div>
-              </div>
-              <div class="col-auto">
-                <input
-                  placeholder="Search here..."
-                  class="form-control form-control-sm" />
-              </div>
-              <div class="col-auto">
-                <button class="btn btn-primary btn-sm">
-                  <i class="bi bi-plus-circle"></i> Button Name
-                </button>
               </div>
             </div>
           </section>
-          <section>Layout info</section>
+          <section>
+            <!-- add company group form -->
+            <form class="row g-3">
+              <div class="col-md-4">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="companyGroupCode" class="form-label"
+                      >Company Group Code <span class="required">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="companyGroupCode"
+                      required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="companyGroupName" class="form-label"
+                      >Company Group Name <span class="required">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="companyGroupName"
+                      required />
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="status"
+                        id="status1" />
+                      <label class="form-check-label" for="status1">
+                        Active
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="status"
+                        id="status2"
+                        checked />
+                      <label class="form-check-label" for="status2">
+                        Deactivated
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="status"
+                        id="status3"
+                        checked />
+                      <label class="form-check-label" for="status3">
+                        In Process
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div>
+                      <hr />
+                    </div>
+                    <button type="submit" class="btn btn-sm btn-primary">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </section>
         </main>
       </section>
       <!-- right panel end-->
@@ -204,7 +279,6 @@
             icon: "bi bi-speedometer2",
             text: "Dashboard",
             href: "./dashboard.html",
-            selectable: true,
           },
           {
             text: "Master",
@@ -240,7 +314,6 @@
           indent: 0.4,
           parentsMarginLeft: "0rem",
           openNodeLinkOnNewTab: false,
-          selectedBackColor: "#000000",
         });
       });
     </script>

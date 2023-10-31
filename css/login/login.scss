@@ -26,7 +26,7 @@
     color: rgb(var(--color-black-rgb));
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     color: rgb(var(--color-black-rgb));
   }
@@ -112,7 +112,8 @@
       }
       .form {
         margin-top: 1.5rem;
-
+        display: grid;
+        gap: 1rem;
         a {
           color: rgb(var(--color-primary-rgb));
           &:hover {

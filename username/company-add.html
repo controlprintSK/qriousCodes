@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+    <title>QriousCodes | Add Company</title>
+    <!-- cdn Stylesheet-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="../css/layout/layout-style.css"
+      type="text/css" />
+    <link rel="stylesheet" href="../css/layout/sidebar.css" type="text/css" />
+    <link href="../css/bstreeview.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ************sec*************** -->
+    <main class="min-h-100vh layout">
+      <!-- side menubar start-->
+      <aside class="sidebar h-100vh">
+        <div class="mainSidebar h-100">
+          <div class="logo">
+            <img src="../images/qriouscodes-icon-light.png" alt="" />
+          </div>
+          <div class="mainNav">
+            <ul class="navList">
+              <li>
+                <button
+                  type="button"
+                  class="btn avtarItem avtarItemLight"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  data-bs-title="Tooltip on right">
+                  <i class="fa-solid fa-gauge"></i>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="btn avtarItem avtarItemLight"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  data-bs-title="Tooltip on right">
+                  <i class="bi bi-person-fill-add"></i>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="btn avtarItem avtarItemLight"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  data-bs-title="Tooltip on right">
+                  <i class="bi bi-gear"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- ----------- -->
+        <div class="sidebarPanel">
+          <div class="brandInfo">
+            <div class="brandLogo">
+              <!-- <img src="/images/logoIcon.png" alt="logoIcon" />
+              <span>QriousCodes</span> -->
+              <img src="../images/qriouscodes-logo.png" alt="logoIcon" />
+            </div>
+          </div>
+          <div class="navList mt-3">
+            <div class="border-bottom pb-1 mb-2">--Menu--------</div>
+            <div>
+              <div id="tree"></div>
+            </div>
+          </div>
+        </div>
+        <!-- ----------- -->
+      </aside>
+      <!-- side menubar end-->
+      <!-- right panel start-->
+      <section class="right-panel">
+        <header class="header border-bottom">
+          <div class="row g-3 justify-content-between align-items-center">
+            <div class="col">
+              <input
+                placeholder="Search here..."
+                class="form-control form-control-sm"
+                style="max-width: 200px" />
+            </div>
+            <div class="col col-auto">
+              <div class="row g-3 justify-content-between align-items-center">
+                <div class="col">
+                  <button
+                    class="btn btn-sm avtarItem position-relative"
+                    type="button">
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      9+
+                    </span>
+                    <i class="bi bi-bell"></i>
+                  </button>
+                </div>
+                <div class="col">
+                  <div>
+                    <button
+                      class="btn btn-sm header-profile-user"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <span class="d-flex align-items-center">
+                        <img
+                          class="rounded-circle header-profile-user-img"
+                          src="../images/user-img.jpg" />
+                        <span class="ms-xl-2 text-start">
+                          <div class="header-user-name">
+                            Prem Deopa<small>Admin</small>
+                          </div>
+                        </span>
+                      </span>
+                    </button>
+                    <ul class="boxShadow dropdown-menu">
+                      <li class="dropdown-title">Welcome Prem!</li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-person"></i> Profile</a
+                        >
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-gear"></i> Setting</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-box-arrow-right"></i> Logout</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="main-wrapper main-wrapper-full-height">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="./company.html" class="backBtn"
+                  ><i class="bi bi-arrow-left"></i> Back</a
+                >
+              </li>
+              <li class="breadcrumb-item">
+                <a href="./company.html">Company</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Add Company
+              </li>
+            </ol>
+          </nav>
+          <section class="page-title">
+            <div class="row g-3 align-items-center">
+              <div class="col">
+                <div class="page-title-text">
+                  <span>Company</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <!-- add company group form -->
+            <form class="row g-4">
+              <!-- col 1 -->
+              <div class="col-md-4">
+                <div class="border-right pe-4">
+                  <h5 class="border-bottom colorTextDark mb-4 pb-1">
+                    Company Info
+                  </h5>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="CompanyCode" class="form-label"
+                        >Company Code <span class="required">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        id="CompanyCode"
+                        required />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="CompanyName" class="form-label"
+                        >Company Name <span class="required">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        id="CompanyName"
+                        required />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="formFileSm" class="form-label"
+                        >Company Logo
+                      </label>
+                      <input
+                        class="form-control form-control-sm"
+                        name="CompanyLogo"
+                        id="formFileSm"
+                        type="file" />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="CompanyGroup" class="form-label"
+                        >Company Group
+                      </label>
+                      <select
+                        name="CompanyGroup"
+                        class="form-select form-select-sm"
+                        aria-label="Small select example">
+                        <option selected>--Company Group--</option>
+                        <option value="1">Mankind Pharma</option>
+                        <option value="2">Kajaria Ceramics</option>
+                        <option value="3">JK Cement</option>
+                      </select>
+                    </div>
+                    <div class="col-md-12 mt-4">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                          checked />
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Active
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault2" />
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Deactivated
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault3" />
+                        <label class="form-check-label" for="flexRadioDefault3">
+                          In Process
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <h5 class="border-bottom colorTextDark my-4 pb-1">
+                    Bank Details
+                  </h5>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="BankName" class="form-label"
+                        >Bank Name
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        id="BankName" />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="BankAccountNo" class="form-label"
+                        >Bank Account No
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        id="BankAccountNo" />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="IFSCCode" class="form-label">IFSCCode </label>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        id="IFSCCode" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- col 2 -->
+              <div class="col-md-4">
+                <h5 class="border-bottom colorTextDark mb-4 pb-1">
+                  Company Address
+                </h5>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="AddressLine1" class="form-label"
+                      >Address Line1
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="AddressLine1" />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="AddressLine2" class="form-label"
+                      >Address Line2
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="AddressLine2" />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="ContryCode" class="form-label"
+                      >Contry Code
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="ContryCode" />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="StateCode" class="form-label"
+                      >State Code
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="StateCode" />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="CityCode" class="form-label">City Code </label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="CityCode" />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="PinCode" class="form-label">Pin Code </label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="PinCode" />
+                  </div>
+                </div>
+              </div>
+              <!-- col 3 -->
+              <div class="col-md-4">
+                <div class="border-left ps-4">
+                  <h5 class="border-bottom colorTextDark mb-4 pb-1">
+                    Tax Details
+                  </h5>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="GSTState" class="form-label"
+                        >GST State
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        id="GSTState" />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="GSTCategory1" class="form-label"
+                        >GST Category 1
+                      </label>
+                      <select
+                        name="GSTCategory1"
+                        class="form-select form-select-sm"
+                        aria-label="Small select example">
+                        <option selected>--GST Category1--</option>
+                        <option value="1">NA</option>
+                        <option value="2">Registered</option>
+                        <option value="3">UnRegistered</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="RegistrationDate" class="form-label"
+                        >Registration Date
+                      </label>
+                      <input
+                        id="startDate"
+                        name="RegistrationDate"
+                        class="form-control form-control-sm"
+                        type="date" />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="PANNumber" class="form-label"
+                        >PAN Number
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        id="PANNumber" />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="GSTIN" class="form-label">GSTIN </label>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        id="GSTIN" />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="GSTCategory2" class="form-label"
+                        >GST Category 2
+                      </label>
+                      <select
+                        name="GSTCategory2"
+                        class="form-select form-select-sm"
+                        aria-label="Small select example">
+                        <option selected>--GST Category2--</option>
+                        <option value="1">NA</option>
+                        <option value="2">SEZ</option>
+                        <option value="3">EOU</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="ComplainceRating" class="form-label"
+                        >Complaince Rating
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        id="ComplainceRating" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- --------  -->
+              <div class="col-12">
+                <div>
+                  <hr />
+                </div>
+                <button type="submit" class="btn btn-sm btn-primary">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </section>
+        </main>
+      </section>
+      <!-- right panel end-->
+    </main>
+    <!-- ===========js function=========== -->
+    <!-- ===========js function=========== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <!-- --------Treeview Initialization--------- -->
+    <script src="../js/bstreeview.js"></script>
+    <script>
+      $(function () {
+        var json = [
+          {
+            icon: "bi bi-speedometer2",
+            text: "Dashboard",
+            href: "./dashboard.html",
+          },
+          {
+            text: "Master",
+            nodes: [
+              {
+                icon: "bi bi-buildings",
+                text: "Company Group",
+                href: "./company-group.html",
+              },
+              {
+                icon: "bi bi-building",
+                text: "Company",
+                href: "./company.html",
+              },
+            ],
+          },
+          {
+            icon: "bi bi-dot",
+            text: "Menu Item 1",
+            href: "#",
+          },
+          {
+            icon: "bi bi-dot",
+            text: "Menu Item 2",
+            href: "#",
+          },
+        ];
+
+        $("#tree").bstreeview({
+          data: json,
+          expandIcon: "fa fa-angle-down fa-fw",
+          collapseIcon: "fa fa-angle-right fa-fw",
+          indent: 0.4,
+          parentsMarginLeft: "0rem",
+          openNodeLinkOnNewTab: false,
+        });
+      });
+    </script>
+  </body>
+</html>

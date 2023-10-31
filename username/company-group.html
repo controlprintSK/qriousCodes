@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
-    <title>QriousCodes | Layout</title>
+    <title>QriousCodes | Company Group</title>
     <!-- cdn Stylesheet-->
     <link
       rel="stylesheet"
@@ -75,7 +75,7 @@
           <div class="brandInfo">
             <div class="brandLogo">
               <!-- <img src="/images/logoIcon.png" alt="logoIcon" />
-            <span>QriousCodes</span> -->
+              <span>QriousCodes</span> -->
               <img src="../images/qriouscodes-logo.png" alt="logoIcon" />
             </div>
           </div>
@@ -155,28 +155,159 @@
             </div>
           </div>
         </header>
-        <main class="main-wrapper">
+        <main class="main-wrapper main-wrapper-full-height">
           <section class="page-title">
             <div class="row g-3 align-items-center">
               <div class="col">
                 <div class="page-title-text">
-                  <span>Page Title</span>
-                  <small>List of page items</small>
+                  <span>Company Group</span>
                 </div>
-              </div>
-              <div class="col-auto">
-                <input
-                  placeholder="Search here..."
-                  class="form-control form-control-sm" />
-              </div>
-              <div class="col-auto">
-                <button class="btn btn-primary btn-sm">
-                  <i class="bi bi-plus-circle"></i> Button Name
-                </button>
               </div>
             </div>
           </section>
-          <section>Layout info</section>
+          <section class="table-responsive">
+            <table class="table table-bordered caption-top table-sm">
+              <caption>
+                <div class="row align-items-center">
+                  <div class="col">List of Company Group</div>
+                  <div class="col col-auto">
+                    <div class="row row-cols-auto g-3 align-items-center">
+                      <div>
+                        <button
+                          class="btn btn-sm dropdown-toggle"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          <i class="bi bi-buildings"></i> Company Group
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Company Group 1</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Company Group 2</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Company Group 3</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <input
+                          placeholder="Search here..."
+                          class="form-control form-control-sm"
+                          id="myInput" />
+                      </div>
+                      <div>
+                        <a
+                          href="./company-group-add.html"
+                          class="btn btn-primary btn-sm">
+                          <i class="bi bi-plus-circle"></i> Company Group
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col" width="40">SN</th>
+                  <th scope="col" width="190">Company Group Code</th>
+                  <th scope="col">Company Group Name</th>
+                  <th scope="col" width="120" class="text-center">Status</th>
+                  <th scope="col" width="120" class="text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody id="myTable">
+                <tr class="table-success">
+                  <th scope="row">1</th>
+                  <td>QCCG0001</td>
+                  <td>Mankind Pharma</td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      <span class="badge text-bg-success">Active</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      <div class="col">
+                        <a href="#"><i class="bi bi-eye"></i></a>
+                      </div>
+                      <div class="col">
+                        <a href="./company-group-add.html"
+                          ><i class="bi bi-pencil-square"></i
+                        ></a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="text-danger"
+                          ><i class="bi bi-trash3"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table-danger">
+                  <th scope="row">2</th>
+                  <td>QCCG0002</td>
+                  <td>Kajaria Ceramics</td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      <span class="badge text-bg-danger">Deactivated</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      <div class="col">
+                        <a href="#"><i class="bi bi-eye"></i></a>
+                      </div>
+                      <div class="col">
+                        <a href="./company-group-add.html"
+                          ><i class="bi bi-pencil-square"></i
+                        ></a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="text-danger"
+                          ><i class="bi bi-trash3"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table-warning">
+                  <th scope="row">3</th>
+                  <td>QCCG0003</td>
+                  <td>JK Cement</td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      <span class="badge text-bg-warning">In Process</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="row g-2 row-cols-auto justify-content-center">
+                      <div class="col">
+                        <a href="#"><i class="bi bi-eye"></i></a>
+                      </div>
+                      <div class="col">
+                        <a href="./company-group-add.html"
+                          ><i class="bi bi-pencil-square"></i
+                        ></a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="text-danger"
+                          ><i class="bi bi-trash3"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
         </main>
       </section>
       <!-- right panel end-->
@@ -204,7 +335,6 @@
             icon: "bi bi-speedometer2",
             text: "Dashboard",
             href: "./dashboard.html",
-            selectable: true,
           },
           {
             text: "Master",
@@ -240,7 +370,6 @@
           indent: 0.4,
           parentsMarginLeft: "0rem",
           openNodeLinkOnNewTab: false,
-          selectedBackColor: "#000000",
         });
       });
     </script>
