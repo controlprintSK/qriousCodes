@@ -5,6 +5,8 @@ ul {
 
 .dropdown-menu {
   font-size: var(--font-size) !important;
+  box-shadow: 0 1px 10px rgba(30, 32, 37, 0.12);
+  border-color: transparent;
 }
 
 .dropdown-item {
@@ -16,7 +18,7 @@ ul {
 .btn.show,
 .btn:first-child:active,
 :not(.btn-check) + .btn:active {
-  border-color: var(--bs-btn-active-border-color);
+  border-color: transparent;
 }
 
 .table > thead th {
@@ -26,7 +28,15 @@ ul {
 .form-control {
   color: var(--color-text-rgb);
 }
+.form-control:focus {
+  border-color: rgba(134, 183, 254, 0.5);
+  box-shadow: 0 0 0.1rem 0.1rem rgba(13, 110, 253, 0.2);
+}
 
 .form-select {
   color: var(--color-text-rgb);
+}
+
+.dropdown-header {
+  font-size: 0.8rem;
 }/*# sourceMappingURL=bootstrap-style.css.map */

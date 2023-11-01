@@ -4,6 +4,8 @@ ul {
 }
 .dropdown-menu {
   font-size: var(--font-size) !important;
+  box-shadow: 0 1px 10px rgba(30, 32, 37, 0.12);
+  border-color: transparent;
 }
 .dropdown-item {
   font-size: var(--font-size) !important;
@@ -13,14 +15,21 @@ ul {
 .btn.show,
 .btn:first-child:active,
 :not(.btn-check) + .btn:active {
-  border-color: var(--bs-btn-active-border-color);
+  border-color: transparent;
 }
 .table > thead th {
   background-color: #f3f6f9;
 }
 .form-control {
   color: var(--color-text-rgb);
+  &:focus {
+    border-color: rgb(134 183 254 / 50%);
+    box-shadow: 0 0 0.1rem 0.1rem rgb(13 110 253 / 20%);
+  }
 }
 .form-select {
   color: var(--color-text-rgb);
+}
+.dropdown-header {
+  font-size: 0.8rem;
 }

@@ -85,11 +85,6 @@
   transition: border-color 0.3s;
 }
 
-.dropdown-title {
-  padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
-  font-size: 0.75rem;
-}
-
 .company-avtar-grid .company-logo {
   background: rgb(var(--color-white-rgb));
   height: 32px;
