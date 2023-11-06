@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+    <title>QriousCodes | Production</title>
+    <!-- cdn Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- cdn Stylesheet -->
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/layout/layout-style.css" />
+    <link rel="stylesheet" href="../css/layout/sidebar.css" />
+    <link rel="stylesheet" href="../css/bstreeview.css" />
+  </head>
+  <body>
+    <!-- ************sec*************** -->
+    <main class="min-h-100vh layout">
+      <!-- side menubar start-->
+      <aside class="sidebar h-100vh">
+        <!-- sidebar menu strip -->
+        <div class="mainSidebar h-100">
+          <div class="logo">
+            <img src="../images/qriouscodes-icon-light.png" alt="" />
+          </div>
+          <div class="mainNav">
+            <ul class="navList">
+              <li>
+                <button
+                  type="button"
+                  class="btn avtarItem avtarItemLight"
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  title="Dashboard">
+                  <i class="fa-solid fa-gauge"></i>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="btn avtarItem avtarItemLight"
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  title="User Name">
+                  <i class="bi bi-person-fill-add"></i>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="btn avtarItem avtarItemLight"
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  title="Setting">
+                  <i class="bi bi-gear"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- sidebar menu strip -->
+        <!-- ----------- -->
+        <div class="sidebarPanel">
+          <div class="brandInfo">
+            <div class="brandLogo">
+              <!-- <img src="/images/logoIcon.png" alt="logoIcon" />
+              <span>QriousCodes</span> -->
+              <img src="../images/qriouscodes-logo.png" alt="logoIcon" />
+            </div>
+          </div>
+          <div class="navList mt-3">
+            <div class="border-bottom pb-1 mb-2">--Menu--------</div>
+            <div>
+              <div id="tree"></div>
+            </div>
+          </div>
+        </div>
+        <!-- ----------- -->
+      </aside>
+      <!-- side menubar end-->
+      <!-- right panel start-->
+      <section class="right-panel">
+        <!-- header -->
+        <header class="header border-bottom">
+          <div class="row g-3 justify-content-between align-items-center">
+            <div class="col">
+              <input
+                placeholder="Search here..."
+                class="form-control form-control-sm"
+                style="max-width: 200px" />
+            </div>
+            <div class="col col-auto">
+              <div class="row g-3 justify-content-between align-items-center">
+                <div class="col">
+                  <button
+                    class="btn btn-sm avtarItem position-relative"
+                    type="button">
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      9+
+                    </span>
+                    <i class="bi bi-bell"></i>
+                  </button>
+                </div>
+                <div class="col">
+                  <div>
+                    <button
+                      class="btn btn-sm header-profile-user"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <span class="d-flex align-items-center">
+                        <img
+                          class="header-profile-user-img"
+                          src="../images/user-img.jpg" />
+                        <span class="ms-xl-2 text-start">
+                          <div class="header-user-name">
+                            Prem Deopa<small>Admin</small>
+                          </div>
+                        </span>
+                      </span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><h6 class="dropdown-header">Welcome Prem!</h6></li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-person"></i> Profile</a
+                        >
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-gear"></i> Setting</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          ><i class="bi bi-box-arrow-right"></i> Logout</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- header -->
+        <main class="main-wrapper main-wrapper-full-height">
+          <!-- page title -->
+          <section class="page-title">
+            <div class="row g-3 align-items-center">
+              <div class="col">
+                <div class="page-title-text">
+                  <span>Production</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- production form -->
+          <section>
+            <form class="row g-4">
+              <!-- col 1 -->
+              <div class="col-md-12">
+                <div class="">
+                  <div class="row g-3">
+                    <div class="col-md-2">
+                      <label for="CompanyCode" class="form-label"
+                        >Company Code <span class="required">*</span></label
+                      >
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control form-control-sm"
+                          id="companyCode"
+                          name="companyCode"
+                          required />
+                        <span
+                          class="input-group-text cursorPointer"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                          ><i class="bi bi-info-square"></i
+                        ></span>
+                      </div>
+                      <!-- <select
+                        name="companyCode"
+                        class="form-select form-select-sm"
+                        required>
+                        <option selected>--Company Code--</option>
+                        <option value="1">Mankind - QCCC0001</option>
+                        <option value="2">Kajaria - QCCC0001</option>
+                        <option value="3">Green Ply - QCCC0001</option>
+                      </select> -->
+                      <div>Company Name</div>
+                    </div>
+                    <div class="col-md-2">
+                      <label for="LineCode" class="form-label"
+                        >Line Code <span class="required">*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        id="LineCode"
+                        required />
+                    </div>
+                    <div class="col-md-2">
+                      <label for="Date" class="form-label">Date </label>
+                      <input
+                        id="date"
+                        name="date"
+                        class="form-control form-control-sm"
+                        type="date" />
+                    </div>
+                    <!-- <div class="col-md-2">
+                      <label for="manufacturingDate" class="form-label"
+                        >Mfg Date
+                      </label>
+                      <input
+                        id="manufacturingDate"
+                        name="manufacturingDate"
+                        class="form-control form-control-sm"
+                        type="date" />
+                    </div> -->
+                    <!-- <div class="col-md-2">
+                      <label for="expiryDate" class="form-label"
+                        >Exp Date
+                      </label>
+                      <input
+                        id="expiryDate"
+                        name="expiryDate"
+                        class="form-control form-control-sm"
+                        type="date" />
+                    </div> -->
+                  </div>
+                  <div class="row g-3 mt-1">
+                    <div class="col-md-6">
+                      <label for="remarks" class="form-label">Remarks </label>
+                      <textarea
+                        id="remarks"
+                        name="remarks"
+                        rows="5"
+                        class="form-control form-control-sm"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- company table -->
+              <section class="table-responsive">
+                <table class="table table-bordered caption-top table-sm">
+                  <caption>
+                    <div class="row align-items-center">
+                      <div class="col">List of items</div>
+                      <div class="col col-auto">
+                        <div class="row row-cols-auto g-3 align-items-center">
+                          <div id="myTable_filter" class="dataTables_filter">
+                            <input
+                              type="text"
+                              placeholder="Search here..."
+                              class="form-control form-control-sm"
+                              id="myInput" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col" width="40">SN</th>
+                      <th scope="col" width="190">Item Code</th>
+                      <th scope="col">Item Name</th>
+                      <th scope="col">Quantity</th>
+                    </tr>
+                  </thead>
+                  <tbody id="myTable">
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>QCC0001</td>
+                      <td>Item Name 1</td>
+                      <td>12</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>QCC0002</td>
+                      <td>Item Name 2</td>
+                      <td>12</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>QCC0003</td>
+                      <td>Item Name 3</td>
+                      <td>12</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>QCC0004</td>
+                      <td>Item Name 4</td>
+                      <td>12</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>QCC0005</td>
+                      <td>Item Name 5</td>
+                      <td>12</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <!-- company table -->
+              <div class="col-12">
+                <div>
+                  <hr />
+                </div>
+                <div class="d-flex g-3">
+                  <div>
+                    <button type="submit" class="btn btn-sm btn-default">
+                      Cancel
+                    </button>
+                  </div>
+                  <div class="ms-3">
+                    <button type="submit" class="btn btn-sm btn-primary">
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </section>
+        </main>
+      </section>
+      <!-- right panel end-->
+    </main>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Select Company
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- company table -->
+            <table class="table table-bordered caption-top table-sm">
+              <caption>
+                <div class="row align-items-center">
+                  <div class="col">List of Company</div>
+                  <div class="col col-auto">
+                    <div class="row row-cols-auto g-3 align-items-center">
+                      <div id="myTable_filter" class="dataTables_filter">
+                        <input
+                          type="text"
+                          placeholder="Search here..."
+                          class="form-control form-control-sm"
+                          id="myCompany" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col" width="40">SN</th>
+                  <th scope="col" width="190">Company Code</th>
+                  <th scope="col">Company Name</th>
+                </tr>
+              </thead>
+              <tbody id="myCompanyTable">
+                <tr>
+                  <th scope="row">1</th>
+                  <td>QCC0001</td>
+                  <td>Mankind Pharma</td>
+                </tr>
+                <tr class="table-danger">
+                  <th scope="row">2</th>
+                  <td>QCC0002</td>
+                  <td>Kajaria</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>QCC0003</td>
+                  <td>Green Ply</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- company table -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===========js function=========== -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- --------Treeview Initialization--------- -->
+    <script src="../js/bstreeview.js"></script>
+    <script>
+      // -------sidebar tree view nav -------
+      $(function () {
+        var json = [
+          {
+            icon: "bi bi-house",
+            text: "Dashboard",
+            href: "./dashboard.html",
+          },
+          {
+            text: "Master",
+            expanded: true,
+            nodes: [
+              {
+                icon: "bi bi-buildings",
+                text: "Company Group",
+                href: "./company-group.html",
+              },
+              {
+                icon: "bi bi-building",
+                text: "Company",
+                href: "./company.html",
+                class: "active",
+              },
+            ],
+          },
+          {
+            text: "Transection",
+            expanded: true,
+            nodes: [
+              {
+                icon: "bi bi-buildings",
+                text: "Production",
+                href: "./production.html",
+              },
+            ],
+          },
+          {
+            icon: "bi bi-box-arrow-right",
+            text: "Logout",
+            href: "#",
+          },
+        ];
+
+        $("#tree").bstreeview({
+          data: json,
+          expandIcon: "fa fa-angle-down fa-fw",
+          collapseIcon: "fa fa-angle-right fa-fw",
+          indent: 0.4,
+          parentsMarginLeft: "0rem",
+          openNodeLinkOnNewTab: false,
+        });
+      });
+      // ------- table search -------
+      $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+        $("#myCompany").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("#myCompanyTable tr").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+      // ------- tooltip -------
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+      // -----------
+    </script>
+  </body>
+</html>
